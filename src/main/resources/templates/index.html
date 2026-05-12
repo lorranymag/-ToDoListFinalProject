@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>To-Do List</title>
+
+    <style>
+        :root {
+      --bg:        #0e0e12;
+      --surface:   #17171e;
+      --card:      #1e1e28;
+      --border:    #2e2e3e;
+      --accent:    #7c6cfa;
+      --accent2:   #fa6c9f;
+      --text:      #e8e8f0;
+      --muted:     #7a7a96;
+      --done-bg:   #1a2a1e;
+      --done-text: #4caf76;
+      --radius:    14px;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 16px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        form {
+            margin: 10px 0;
+            form {
+            display: inline;
+            }
+        }
+
+        input {
+            padding: 8px;
+            border-radius: 6px;
+            border: none;
+        }
+
+        button {
+            margin-left: 5px;
+            padding: 8px 12px;
+            border-radius: 6px;
+            border: none;
+            background: var(--accent);
+            color: white;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            width: 300px;
+        }
+
+        li {
+            background: var(--card);
+            margin: 8px 0;
+            padding: 12px;
+            border-radius: var(--radius);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            color: var(--done-text);
+        }
+    </style>
+</head>
+<script>
+function showEdit(index) {
+    document.getElementById("view-" + index).style.display = "none";
+    document.getElementById("edit-" + index).style.display = "block";
+}
+
+function hideEdit(index) {
+    document.getElementById("view-" + index).style.display = "block";
+    document.getElementById("edit-" + index).style.display = "none";
+}
+</script>
+<body>
+<div class="wrapper">
+
+    <h1>My To-Do List</h1>
+
+    <form action="/add" method="post">
+        <input type="text" name="task" placeholder="Enter task">
+        <button type="submit">Add Task</button>
+    </form>
+
+    <hr>
+
+    <ul>
+        <!-- your existing li loop stays here -->
+    </ul>
+
+</div>
+
+<hr>
+
+<ul>
+       <li th:each="task, iterStat : ${tasks}">
+
+    <!-- NORMAL VIEW -->
+    <div th:id="'view-' + ${iterStat.index}">
+        <span th:text="${task}"
+              th:classappend="${completed[iterStat.index]} ? 'completed'">
+        </span>
+
+        <button type="button"
+        th:onclick="'showEdit(' + ${iterStat.index} + ')'">
+        Edit
+        </button>
+
+        <form action="/complete" method="post" style="display:inline;">
+            <input type="hidden" name="index" th:value="${iterStat.index}">
+            <button>✔</button>
+        </form>
+
+        <form action="/delete" method="post" style="display:inline;">
+            <input type="hidden" name="index" th:value="${iterStat.index}">
+            <button>Delete</button>
+        </form>
+    </div>
+
+    <!-- EDIT VIEW (hidden by default) -->
+    <div th:id="'edit-' + ${iterStat.index}" style="display:none;">
+
+        <form action="/edit" method="post">
+            <input type="hidden" name="index" th:value="${iterStat.index}">
+            <input type="text" name="task" th:value="${task}">
+            <button type="submit">Save</button>
+
+           <button type="button"
+            th:onclick="'hideEdit(' + ${iterStat.index} + ')'">
+            Cancel
+            </button>
+        </form>
+
+    </div>
+</li>
+
+</ul>
+
+</body>
+</html>
