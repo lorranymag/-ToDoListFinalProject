@@ -1,6 +1,6 @@
 # 📝 To-Do List Final Project  
 ## Final Project — Java Class CIS 254  
-### 👩‍💻 Authors: Lorrany Evangelista Schiavo Magalhães & Elayne Vilela  
+### 👩‍💻 Authors: Lorrany E. S.Magalhaes & Elayne Vilela  
 
 ---
 
