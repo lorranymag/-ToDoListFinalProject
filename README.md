@@ -1,8 +1,8 @@
-## To Do List Final Project
+## 📝 To Do List Final Project
 ## Final Project — Java Class 254
-### Author: Lorrany Evangelista Schiavo Magalhaes and Elayne Vilela.
+### 👩‍💻 Authors: Lorrany Evangelista Schiavo Magalhaes and Elayne Vilela.
 
-## Description
+## 📖Description
 
 This project is a To-Do List application built as the final project for Java Class CIS 254. It comes in two versions:
 
@@ -14,7 +14,9 @@ a modern, browser-based interface for the same To-Do List. Built with HTML, CSS,
 
 Both versions share the same core logic and features — the HTML version is simply a visual upgrade over the console version.
 
-## Project Structure
+This application allows the user to add simple tasks to a to-do list.
+
+## 📁 Project Structure
 
 project/
 ├── .git/                  ← Git version control (auto-generated)
@@ -26,11 +28,11 @@ project/
 │   └── TodolistApplication         ← Tells Git what not to upload
 ├── templates/  
 ├── └──index.html                  ← HTML/CSS/JS visual To-Do List     
-├── .gitattributes                 ← 
-├── .gitignore                     ←   
+├── .gitattributes                 ← No use
+├── .gitignore                     ←  No use  
 └── README.md                      ← This file
 
-### How to use the application
+### 🚀How to use the application
 ## Running the HTML Version (recommended)
 
 1. Open the project in Visual Studio Code
@@ -48,11 +50,7 @@ project/
 - Use the All / Active / Completed filters to sort your view
 - Tasks are automatically saved in the browser — they persist after refresh
 
-### Basic Functionality
-
-This application allows the user to add simple tasks to a to-do list.
-
-### Technologies Used
+### 🛠️ Technologies Used
 |Technology | Purpose
 
 | Java | Console app logic and Swing welcome screen | Java ArrayList | Dynamic task storage at runtime | Java Swing | Desktop GUI window for welcome screen | HTML5 | Structure of the visual To-Do List | CSS3 | Styling, animations, and layout | JavaScript | App logic and interactivity in the browser | localStorage | Saves tasks in the browser between sessions | VS Code | Code editor | GitHub | Version control and project hosting
