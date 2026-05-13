@@ -49,19 +49,33 @@ Both versions share the same core functionality — the web version is a **visua
 
 ## 📁 Project Structure  
 project/
+
 ├── .git/
+
 ├── .vscode/
+
 ├── src/
+
 │ └── main/
+
 │ ├── java/com/todo/todolist/
+
 │ │ ├── ToDoList.java # Console version
+
 │ │ ├── ToDoController.java # Web controller
+
 │ │ └── TodolistApplication.java # Spring Boot main app
+
 │ └── resources/
+
 │ └── templates/
+
 │ └── index.html # Web UI
+
 ├── pom.xml
+
 ├── .gitignore
+
 └── README.md
 
 ---
