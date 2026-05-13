@@ -1,15 +1,15 @@
-## 📝 To Do List Final Project
+# 📝 To Do List Final Project
 ## Final Project — Java Class 254
 ### 👩‍💻 Authors: Lorrany Evangelista Schiavo Magalhaes and Elayne Vilela.
 
-## 📖Description
+# 📖Description
 
 This project is a To-Do List application built as the final project for Java Class CIS 254. It comes in two versions:
 
-# Java Console Version (ToDoList.java) — 
+### Java Console Version (ToDoList.java) — 
 a terminal-based task manager that runs in the console. It uses ArrayList to store and manage tasks dynamically at runtime, allowing users to add, view, complete, and delete tasks through a numbered menu.
 
-# HTML Visual Version (index.html) — 
+### HTML Visual Version (index.html) — 
 a modern, browser-based interface for the same To-Do List. Built with HTML, CSS, and JavaScript, it offers a clean visual experience with real-time task tracking, a progress bar, filters, and data persistence through localStorage so tasks are saved even after closing the browser.
 
 Both versions share the same core logic and features — the HTML version is simply a visual upgrade over the console version.
