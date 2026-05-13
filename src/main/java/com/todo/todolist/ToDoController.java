@@ -12,12 +12,10 @@ public class ToDoController {
     ArrayList<String> tasks = new ArrayList<>();
     ArrayList<Boolean> completed = new ArrayList<>();
 
-    @GetMapping("/")
+   @GetMapping("/")
     public String home(Model model) {
-
         model.addAttribute("tasks", tasks);
         model.addAttribute("completed", completed);
-
         return "index";
     }
 
