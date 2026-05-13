@@ -6,7 +6,7 @@
 
 This project is a To-Do List application built as the final project for Java Class CIS 254. It comes in two versions:
 
-### Java Console Version (ToDoList.java) — 
+### Java Console Version (ToDoApplication.java) — 
 a terminal-based task manager that runs in the console. It uses ArrayList to store and manage tasks dynamically at runtime, allowing users to add, view, complete, and delete tasks through a numbered menu.
 
 ### HTML Visual Version (index.html) — 
