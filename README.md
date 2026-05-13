@@ -1,41 +1,58 @@
 ## To Do List Final Project
+## Final Project — Java Class 254
 ### Author: Lorrany Evangelista Schiavo Magalhaes and Elayne Vilela.
 
-## Overview
+## Description
 
-Welcome to our final project to Java Class 254. This project is a simple To-Do List application built using Java Swing. The To-Do List Java Application is a simple yet  functional console-based task management program built in Java. It allows users to create, view, and manage their daily tasks in an organized and straightforward way. All tasks are stored and managed using an ArrayList, Java's built-in dynamic data structure, which allows flexible and efficient handling of task entries at runtime without a fixed size limit.
+This project is a To-Do List application built as the final project for Java Class CIS 254. It comes in two versions:
+
+## Java Console Version (ToDoList.java) — 
+a terminal-based task manager that runs in the console. It uses ArrayList to store and manage tasks dynamically at runtime, allowing users to add, view, complete, and delete tasks through a numbered menu.
+
+## HTML Visual Version (index.html) — 
+a modern, browser-based interface for the same To-Do List. Built with HTML, CSS, and JavaScript, it offers a clean visual experience with real-time task tracking, a progress bar, filters, and data persistence through localStorage so tasks are saved even after closing the browser.
+
+Both versions share the same core logic and features — the HTML version is simply a visual upgrade over the console version.
 
 ## Project Structure
 
-The workspace contains two folders by default, where:
+project/
+├── .git/                  ← Git version control (auto-generated)
+├── .vscode/               ← VS Code workspace settings
+├── src/                   ← All source files live here
+│   ├── Main               ← Where the files for this code is 
+│   ├── java/com/todo/ todolist     ← Java console-based To-Do List
+│   ├── ToDoController.java         ← HTML/CSS/JS visual To-Do List
+│   └── TodolistApplication         ← Tells Git what not to upload
+├── templates/  
+├── └──index.html                  ← HTML/CSS/JS visual To-Do List     
+├── .gitattributes                 ← 
+├── .gitignore                     ←   
+└── README.md                      ← This file
 
-src: the folder to maintain sources
-doc: the folder to maintain documentation related to my project (UML diagram, etc)
-This projects teaches the basics of Swing
+### How to use the application
+## Running the HTML Version (recommended)
 
-## How to use the application
+1. Open the project in Visual Studio Code
+2. Open the finel you download from GitHub 
+3. Open src, main, java/com/todo/ todolist, then TodolistApplication 
+4. Click "Go Live" at the bottom right of VS Code
+5. The app will open in your browser automatically
 
-Open the project in Visual Studio Code
+## Features available in the browser:
 
-Navigate to the src folder
-Locate the main file (App.java and ToDoList.java)
-Run the program using the IDE or terminal:
+- Add a new task by typing and pressing Enter or clicking + Add
+- Click the check button when tasks are completed
+- Click the delete button if you no longer want that tasks
+- Click the edit button if you misspelled the word
+- Use the All / Active / Completed filters to sort your view
+- Tasks are automatically saved in the browser — they persist after refresh
 
 ### Basic Functionality
 
 This application allows the user to add simple tasks to a to-do list.
 
-### Application Menu
+### Technologies Used
+|Technology | Purpose
 
-Once running, the application will display a menu in the console:
-
-===== TO-DO LIST =====
-
-Here is your menu options:
-
-Add a task
-View tasks
-Mark a task as completed
-Exit Please enter your choice:
-
-### Screenshot
+| Java | Console app logic and Swing welcome screen | Java ArrayList | Dynamic task storage at runtime | Java Swing | Desktop GUI window for welcome screen | HTML5 | Structure of the visual To-Do List | CSS3 | Styling, animations, and layout | JavaScript | App logic and interactivity in the browser | localStorage | Saves tasks in the browser between sessions | VS Code | Code editor | GitHub | Version control and project hosting
