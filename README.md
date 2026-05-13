@@ -1,56 +1,115 @@
-# 📝 To Do List Final Project
-## Final Project — Java Class 254
-### 👩‍💻 Authors: Lorrany Evangelista Schiavo Magalhaes and Elayne Vilela.
+# 📝 To-Do List Final Project  
+## Final Project — Java Class CIS 254  
+### 👩‍💻 Authors: Lorrany Evangelista Schiavo Magalhães & Elayne Vilela  
 
-# 📖Description
+---
 
-This project is a To-Do List application built as the final project for Java Class CIS 254. It comes in two versions:
+## 📖 Description  
 
-### Java Console Version (ToDoApplication.java) — 
-a terminal-based task manager that runs in the console. It uses ArrayList to store and manage tasks dynamically at runtime, allowing users to add, view, complete, and delete tasks through a numbered menu.
+This project is a **To-Do List application** built as the final project for Java Class CIS 254.  
 
-### HTML Visual Version (index.html) — 
-a modern, browser-based interface for the same To-Do List. Built with HTML, CSS, and JavaScript, it offers a clean visual experience with real-time task tracking, a progress bar, filters, and data persistence through localStorage so tasks are saved even after closing the browser.
+It includes two versions:
 
-Both versions share the same core logic and features — the HTML version is simply a visual upgrade over the console version.
+### 💻 Java Console Version (`ToDoList.java`)  
+A terminal-based task manager that runs in the console.  
+It uses `ArrayList` to store and manage tasks dynamically at runtime.  
 
-This application allows the user to add simple tasks to a to-do list.
+Features:
+- Add tasks  
+- View tasks  
+- Mark tasks as completed  
+- Delete tasks  
 
-## 📁 Project Structure
+---
 
+### 🌐 Web Version (Spring Boot + Thymeleaf)  
+A modern, browser-based version of the To-Do List.  
+
+This version connects:
+- **Frontend:** HTML, CSS  
+- **Backend:** Java (Spring Boot)  
+
+Files involved:
+- `index.html` → user interface  
+- `ToDoController.java` → handles logic  
+- `TodolistApplication.java` → runs the app  
+
+Features:
+- ➕ Add tasks  
+- ✔ Mark tasks as completed  
+- ✏️ Edit tasks  
+- ❌ Delete tasks  
+- 🎨 Clean and modern UI  
+
+---
+
+Both versions share the same core functionality — the web version is a **visual upgrade** of the console version.
+
+---
+
+## 📁 Project Structure  
 project/
-├── .git/                  ← Git version control (auto-generated)
-├── .vscode/               ← VS Code workspace settings
-├── src/                   ← All source files live here
-│   ├── Main               ← Where the files for this code is 
-│   ├── java/com/todo/ todolist     ← Java console-based To-Do List
-│   ├── ToDoController.java         ← HTML/CSS/JS visual To-Do List
-│   └── TodolistApplication         ← Tells Git what not to upload
-├── templates/  
-├── └──index.html                  ← HTML/CSS/JS visual To-Do List     
-├── .gitattributes                 ← No use
-├── .gitignore                     ←  No use  
-└── README.md                      ← This file
+├── .git/
+├── .vscode/
+├── src/
+│ └── main/
+│ ├── java/com/todo/todolist/
+│ │ ├── ToDoList.java # Console version
+│ │ ├── ToDoController.java # Web controller
+│ │ └── TodolistApplication.java # Spring Boot main app
+│ └── resources/
+│ └── templates/
+│ └── index.html # Web UI
+├── pom.xml
+├── .gitignore
+└── README.md
 
-### 🚀How to use the application
-## Running the HTML Version (recommended)
+---
 
-1. Open the project in Visual Studio Code
-2. Open the finel you download from GitHub 
-3. Open src, main, java/com/todo/ todolist, then TodolistApplication 
-4. Click "Go Live" at the bottom right of VS Code
-5. The app will open in your browser automatically
+## 🚀 How to Run the Application  
 
-## Features available in the browser:
+### ▶️ Run the Web Version (Recommended)
 
-- Add a new task by typing and pressing Enter or clicking + Add
-- Click the check button when tasks are completed
-- Click the delete button if you no longer want that tasks
-- Click the edit button if you misspelled the word
-- Use the All / Active / Completed filters to sort your view
-- Tasks are automatically saved in the browser — they persist after refresh
+1. Open the project in **Visual Studio Code**  
+2. Open the terminal  
+3. Run the program 
+4. It will open in your browser automatically
 
-### 🛠️ Technologies Used
-|Technology | Purpose
 
-| Java | Console app logic and Swing welcome screen | Java ArrayList | Dynamic task storage at runtime | Java Swing | Desktop GUI window for welcome screen | HTML5 | Structure of the visual To-Do List | CSS3 | Styling, animations, and layout | JavaScript | App logic and interactivity in the browser | localStorage | Saves tasks in the browser between sessions | VS Code | Code editor | GitHub | Version control and project hosting
+---
+
+## ✨ Features  
+
+- ➕ Add new tasks  
+- ✔ Mark tasks as completed  
+- ✏️ Edit tasks  
+- ❌ Delete tasks  
+- 🔄 Dynamic updates with Spring Boot  
+- 🎨 Clean and responsive interface  
+
+---
+
+## 🛠️ Technologies Used  
+
+| Technology | Purpose |
+|----------|--------|
+| Java | Backend logic |
+| Spring Boot | Web framework |
+| Thymeleaf | Connects Java to HTML |
+| HTML5 | Structure |
+| CSS3 | Styling |
+| JavaScript | UI interactivity |
+| ArrayList | Task storage |
+| Maven | Project management |
+| VS Code | Development environment |
+| GitHub | Version control |
+
+---
+
+## 📝 Notes  
+
+- The web version runs using **Spring Boot (not Live Server)**  
+- Make sure port **8080** is available  
+- If the app doesn’t load, restart the server  
+
+---
